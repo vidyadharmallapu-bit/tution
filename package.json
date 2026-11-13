@@ -1,0 +1,22 @@
+{
+  "name": "bright-future-tuition",
+  "version": "1.0.0",
+  "description": "Bright Future Tuition Center website - frontend build scripts",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'No build step needed - HTML serves directly from Flask'",
+    "html:validate": "npx htmlhint index.html",
+    "html:minify": "md dist && npx html-minifier-terser index.html --collapse-whitespace --remove-comments > dist/index.html",
+    "lint": "npm run html:validate",
+    "start": "echo 'Use: python project\\\\app.py to start the Flask server'",
+    "preview": "echo 'Open index.html in your browser to preview the site'"
+  },
+  "keywords": [
+    "html",
+    "build",
+    "tuition",
+    "center"
+  ],
+  "author": "",
+  "license": "MIT"
+}
