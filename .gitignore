@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment files (never commit secrets)
+.env
+.env.local
+.env.*.local
+
+# SQLite database
+*.db
+*.sqlite3
+
+# Vercel
+.vercel/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.swp
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Executables
+*.exe
+
+# Junk files
+cd
+Expand-Archive
+Invoke-WebRequest
+Remove-Item
+

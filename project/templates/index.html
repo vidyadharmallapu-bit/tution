@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bright Future Tuition Center offers quality coaching for classes 3 to 10 with experienced teachers, regular tests, and personalized attention."
+    />
+    <meta name="keywords" content="tuition center, coaching institute, classes 3 to 10, Chennai tuition" />
+    <title>Bright Future Tuition Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  </head>
+  <body>
+    <div id="loadingOverlay" class="loading-overlay d-none">
+      <div class="spinner-border text-white" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1080;"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#home">Bright Future</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="#fees">Fees</a></li>
+            <li class="nav-item"><a class="nav-link" href="#register">Register</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header id="home" class="hero">
+      <div class="container py-5">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7" data-aos="fade-right">
+            <p class="badge bg-light text-primary mb-3">Trusted Coaching Institute</p>
+            <h1>Welcome to Bright Future Tuition Center</h1>
+            <p class="lead mb-4">
+              Quality Education for Classes 3 to 10 with experienced mentors, strong concepts, and consistent support.
+            </p>
+            <div class="notice-banner mb-4">
+              <i class="fa-solid fa-laptop"></i>
+              Online classes available for remote learners.
+            </div>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#register" class="btn btn-primary-custom">Register Now</a>
+              <a href="#contact" class="btn btn-outline-light-custom">Contact Us</a>
+            </div>
+            <div class="row mt-4 g-3">
+              <div class="col-sm-4">
+                <div class="bg-white bg-opacity-10 rounded-4 p-3">
+                  <strong>500+</strong>
+                  <div class="small">Happy Students</div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="bg-white bg-opacity-10 rounded-4 p-3">
+                  <strong>10+</strong>
+                  <div class="small">Years Experience</div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="bg-white bg-opacity-10 rounded-4 p-3">
+                  <strong>96%</strong>
+                  <div class="small">Exam Success</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5" data-aos="fade-left">
+            <div class="card border-0 rounded-4 shadow-lg p-4 bg-white text-dark">
+              <h4 class="fw-bold mb-3">Why parents choose us</h4>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>Concept-based learning</li>
+                <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>Regular test tracking</li>
+                <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>Small batches and personal guidance</li>
+                <li><i class="fa-solid fa-check text-primary me-2"></i>Focus on confidence and results</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="about" class="py-5 bg-white">
+        <div class="container py-3">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+              <h2 class="section-title">About Us</h2>
+              <p class="text-muted lead">
+                Bright Future Tuition Center is dedicated to helping students from Class 3 to Class 10 build a strong academic foundation.
+                Our experienced teachers focus on concept-based learning, regular assessments, and individualized guidance to ensure every child progresses confidently.
+              </p>
+              <p class="text-muted">
+                We believe in creating a supportive learning environment where students receive personalized attention, regular homework support, and focused exam preparation.
+              </p>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+              <img
+                src="{{ url_for('static', filename='images/about-us.jpeg') }}"
+                alt="About our tuition center"
+                class="img-fluid rounded-4 shadow"
+                onerror="this.src='https://images.unsplash.com/photo-1513258496099-48113624d4db?auto=format&fit=crop&w=1000&q=80'"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="courses" class="py-5" style="background: var(--secondary);">
+        <div class="container py-3">
+          <div class="text-center mb-4" data-aos="fade-up">
+            <h2 class="section-title">Courses Offered</h2>
+            <p class="text-muted">Tailored programs for every stage of school learning</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-4" data-aos="zoom-in">
+              <div class="card card-hover h-100 p-4">
+                <div class="icon-box mb-3"><i class="fa-solid fa-book-open"></i></div>
+                <h4 class="fw-bold">Class 3–5</h4>
+                <p class="text-muted">A strong foundation in core subjects with engaging learning methods.</p>
+                <ul class="list-unstyled small text-muted">
+                  <li><i class="fa-solid fa-check text-primary me-2"></i>English, Maths, EVS, Hindi/Tamil</li>
+                  <li><i class="fa-solid fa-check text-primary me-2"></i>Regular Homework Support</li>
+                  <li><i class="fa-solid fa-check text-primary me-2"></i>Exam Preparation</li>
+                  <li><i class="fa-solid fa-check text-primary me-2"></i>Individual Attention</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+              <div class="card card-hover h-100 p-4">
+                <div class="icon-box mb-3"><i class="fa-solid fa-brain"></i></div>
+                <h4 class="fw-bold">Class 6–8</h4>
+                <p class="text-muted">Structured support for building analytical thinking and subject clarity.</p>
+                <ul class="list-unstyled small text-muted">
+                  <li><i class="fa-solid fa-check text-primary me-2"></i>English, Maths, Science, Social, Hindi/Tamil</li>
+                  <li><i class="fa-solid fa-check text-primary me-2"></i>Regular Homework Support</li>
+                  <li><i class="fa-solid fa-check text-primary me-2"></i>Exam Preparation</li>
+                  <li><i class="fa-solid fa-check text-primary me-2"></i>Individual Attention</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+              <div class="card card-hover h-100 p-4">
+                <div class="icon-box mb-3"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h4 class="fw-bold">Class 9–10</h4>
+                <p class="text-muted">Focused preparation for board exams and higher academic confidence.</p>
+                <ul class="list-unstyled small text-muted">
+                  <li><i class="fa-solid fa-check text-primary me-2"></i>English, Maths, Science, Social, Hindi/Tamil</li>
+                  <li><i class="fa-solid fa-check text-primary me-2"></i>Regular Homework Support</li>
+                  <li><i class="fa-solid fa-check text-primary me-2"></i>Exam Preparation</li>
+                  <li><i class="fa-solid fa-check text-primary me-2"></i>Individual Attention</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="fees" class="py-5 bg-white">
+        <div class="container py-3">
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-7" data-aos="fade-right">
+              <h2 class="section-title">Monthly Tuition Fee</h2>
+              <p class="text-muted">Affordable and transparent monthly fee structure.</p>
+              <div class="table-responsive">
+                <table class="table table-bordered table-custom align-middle">
+                  <thead>
+                    <tr>
+                      <th>Class</th>
+                      <th>Monthly Fee</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Class 3–5</td><td>₹2,000</td></tr>
+                    <tr><td>Class 6–8</td><td>₹2,500</td></tr>
+                    <tr><td>Class 9–10</td><td>₹3,000</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="text-muted mt-3"><em>Please contact us for the latest fee details.</em></p>
+            </div>
+            <div class="col-lg-5" data-aos="fade-left">
+              <div class="card card-hover p-4">
+                <h4 class="fw-bold mb-3">Class Timing</h4>
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <div class="icon-box"><i class="fa-solid fa-clock"></i></div>
+                  <div>
+                    <h6 class="mb-0">Evening Batch</h6>
+                    <div class="text-muted">🕕 6:00 PM – 7:30 PM</div>
+                  </div>
+                </div>
+                <p class="text-muted mb-0">Ideal for students who need focused guidance after school hours.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="register" class="py-5" style="background: var(--secondary);">
+        <div class="container py-3">
+          <div class="row g-4">
+            <div class="col-lg-6" data-aos="fade-right">
+              <h2 class="section-title">Register Your Child</h2>
+              <p class="text-muted">Fill out the registration form and our team will contact you shortly.</p>
+              <form id="registrationForm" method="POST" novalidate>
+              {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                  {% for category, msg in messages %}
+                    <div class="toast align-items-center text-bg-{{ 'success' if category == 'success' else 'warning' if category == 'warning' else 'danger' }} border-0 mb-2" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000">
+                      <div class="d-flex">
+                        <div class="toast-body">
+                          {{ msg }}
+                        </div>
+                        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                      </div>
+                    </div>
+                  {% endfor %}
+                {% endif %}
+              {% endwith %}
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="studentName">Student Name</label>
+                    <input class="form-control" id="studentName" name="studentName" required />
+                    <div class="invalid-feedback">Please enter the student name.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="parentName">Parent Name</label>
+                    <input class="form-control" id="parentName" name="parentName" required />
+                    <div class="invalid-feedback">Please enter the parent name.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="phone">Phone Number</label>
+                    <input class="form-control" id="phone" name="phone" required />
+                    <div class="invalid-feedback">Please enter a valid phone number.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="email">Email Address</label>
+                    <input class="form-control" id="email" name="email" type="email" required />
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="classLevel">Class (3–10)</label>
+                    <select class="form-select" id="classLevel" name="classLevel" required>
+                      <option value="">Choose class</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                      <option>9</option>
+                      <option>10</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a class.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="schoolName">School Name</label>
+                    <input class="form-control" id="schoolName" name="schoolName" required />
+                    <div class="invalid-feedback">Please enter the school name.</div>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="address">Address</label>
+                    <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+                    <div class="invalid-feedback">Please enter the address.</div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary-custom">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+              <div class="card card-hover p-4 h-100">
+                <h4 class="fw-bold">Why Choose Us</h4>
+                <div class="row g-3 mt-1">
+                  <div class="col-sm-6">
+                    <div class="p-3 rounded-4 border h-100">
+                      <div class="icon-box mb-2"><i class="fa-solid fa-chalkboard-user"></i></div>
+                      <h6>Experienced Teachers</h6>
+                      <p class="small text-muted mb-0">Learn from dedicated educators with deep subject knowledge.</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="p-3 rounded-4 border h-100">
+                      <div class="icon-box mb-2"><i class="fa-solid fa-user-graduate"></i></div>
+                      <h6>Individual Attention</h6>
+                      <p class="small text-muted mb-0">Every student receives personal support and guidance.</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="p-3 rounded-4 border h-100">
+                      <div class="icon-box mb-2"><i class="fa-solid fa-file-lines"></i></div>
+                      <h6>Weekly Tests</h6>
+                      <p class="small text-muted mb-0">Track progress through regular assessments and feedback.</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="p-3 rounded-4 border h-100">
+                      <div class="icon-box mb-2"><i class="fa-solid fa-house"></i></div>
+                      <h6>Homework Support</h6>
+                      <p class="small text-muted mb-0">Get help finishing assignments and understanding concepts.</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="p-3 rounded-4 border h-100">
+                      <div class="icon-box mb-2"><i class="fa-solid fa-bullseye"></i></div>
+                      <h6>Exam Preparation</h6>
+                      <p class="small text-muted mb-0">Targeted strategies for scoring well in exams.</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="p-3 rounded-4 border h-100">
+                      <div class="icon-box mb-2"><i class="fa-solid fa-star"></i></div>
+                      <h6>Quality Education</h6>
+                      <p class="small text-muted mb-0">A balanced blend of discipline, clarity, and care.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5 bg-white">
+        <div class="container py-3">
+          <div class="text-center mb-4" data-aos="fade-up">
+            <h2 class="section-title">Student Testimonials</h2>
+            <p class="text-muted">What students and parents say about us</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up">
+              <div class="card card-hover p-4">
+                <img src="{{ url_for('static', filename='images/st2.png') }}" class="rounded-circle mb-3" width="80" height="80" alt="Nikarika" />
+                <h5 class="fw-bold">Nikarika</h5>
+                <p class="text-muted">“4th CBSE student. The teaching style here is so clear and supportive.”</p>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="card card-hover p-4">
+                <img src="{{ url_for('static', filename='images/st1.png') }}" class="rounded-circle mb-3" width="80" height="80" alt="Hasini" />
+                <h5 class="fw-bold">Hasini</h5>
+                <p class="text-muted">“6th E-Tech student. I feel more confident with every class.”</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5" style="background: var(--secondary);">
+        <div class="container py-3">
+          <div class="text-center mb-4" data-aos="fade-up">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="text-muted">Common questions parents and students ask</p>
+          </div>
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item border-0 rounded-4 shadow-sm mb-3" data-aos="fade-up">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  How can I register?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">You can register by filling the form on this page or by contacting us directly via phone or WhatsApp.</div>
+              </div>
+            </div>
+            <div class="accordion-item border-0 rounded-4 shadow-sm mb-3" data-aos="fade-up" data-aos-delay="100">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  Is there a free demo class?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Yes, we offer a free demo class for new students to experience our teaching style.</div>
+              </div>
+            </div>
+            <div class="accordion-item border-0 rounded-4 shadow-sm mb-3" data-aos="fade-up" data-aos-delay="200">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  What are the class timings?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Our evening batch runs from 6:00 PM to 7:30 PM.</div>
+              </div>
+            </div>
+            <div class="accordion-item border-0 rounded-4 shadow-sm" data-aos="fade-up" data-aos-delay="300">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  How do I pay the monthly tuition fee?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">We accept monthly fee payments through UPI, bank transfer, or cash. Please contact us for the latest payment details.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-5 bg-white">
+        <div class="container py-3">
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-6" data-aos="fade-right">
+              <h2 class="section-title">Location</h2>
+              <p class="text-muted mb-4">Visit us at our tuition center in Sai Nagar, Chennai.</p>
+              <div class="card card-hover p-4">
+                <div class="d-flex align-items-center gap-3">
+                  <img src="{{ url_for('static', filename='images/tutor.jpg') }}" alt="Dr. krishna kumar" class="rounded-circle shadow" width="90" height="90" onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80'" />
+                  <div>
+                    <h5 class="fw-bold mb-0">Dr. krishna kumar</h5>
+                    <small class="text-muted">Senior Tutor</small>
+                    <div class="mt-2 small text-muted">📍 Sai Nagar, Chennai</div>
+                  </div>
+                </div>
+
+                <p class="text-muted mb-3 mt-3">Phone: <a href="tel:+918148308622">+91 81483 08622</a><br />Email: <a href="mailto:kkrishnakumar86@gmail.com">kkrishnakumar86@gmail.com</a></p>
+
+                <div class="d-flex flex-wrap gap-2">
+                  <a href="https://wa.me/918148308622" target="_blank" class="btn btn-success"><i class="fa-brands fa-whatsapp me-2"></i>Chat with Sir</a>
+                  <a href="tel:+918148308622" class="btn btn-outline-primary"><i class="fa-solid fa-phone me-2"></i>Call Now</a>
+                  <a href="https://www.google.com/maps/place/13%C2%B003'25.9%22N+80%C2%B011'54.1%22E/@13.0571975,80.1957845,17z" target="_blank" class="btn btn-outline-secondary"><i class="fa-solid fa-location-dot me-2"></i>View on Map</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+              <div class="map-responsive">
+                <iframe
+                  src="https://www.google.com/maps?q=Sai%20Nagar%20Chennai&z=14&output=embed"
+                  width="100%"
+                  height="350"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Map location of Bright Future Tuition Center"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <h5 class="fw-bold">Bright Future Tuition Center</h5>
+            <p class="text-light-emphasis">Committed to academic excellence and student success.</p>
+          </div>
+          <div class="col-md-4">
+            <h5 class="fw-bold">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#about" class="text-light text-decoration-none">About</a></li>
+              <li><a href="#courses" class="text-light text-decoration-none">Courses</a></li>
+              <li><a href="#register" class="text-light text-decoration-none">Register</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5 class="fw-bold">Contact</h5>
+            <p class="text-light-emphasis mb-2">+91 81483 08622</p>
+            <p class="text-light-emphasis"><a href="mailto:kkrishnakumar86@gmail.com" class="text-light-emphasis text-decoration-none">kkrishnakumar86@gmail.com</a></p>
+            <div class="social mt-3">
+              <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=Wgs6lVAAAAAJ" target="_blank" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+              <a href="https://www.scopus.com/authid/detail.uri?authorId=57767029700" target="_blank" aria-label="Scopus"><i class="fa-solid fa-book"></i></a>
+              <a href="https://orcid.org/my-orcid?orcid=0009-0009-1278-0538" target="_blank" aria-label="ORCID"><i class="fa-solid fa-id-badge"></i></a>
+              <a href="https://www.webofscience.com/wos/op/publications/summary" target="_blank" aria-label="Clarivate"><i class="fa-solid fa-chart-line"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="border-top border-secondary mt-4 pt-3 text-center text-light-emphasis">
+          <small>Copyright © 2026 Bright Future Tuition Center. All Rights Reserved.</small>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>
